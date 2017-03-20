@@ -4,7 +4,7 @@
 
 最坏查找时间为lgN ,插入为2N， 平均成本查找lgN 插入为N
 
-quickly to start
+## quickly to start
 
 直接调用
 ```  
