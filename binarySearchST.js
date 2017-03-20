@@ -75,14 +75,19 @@
 			return this.keys[i];
 		},
 
-		this.delete = function(key){
-			var i = rank(key);
-			for(var j = this.N; j > i ; j --){
-				this.keys[j-1] = this.keys[j]; this.values[j-1] = this.values[j];
+		this.del = function(key){
+			debugger;
+			var i = this.rank(key);
+			//不存在
+			if (i == this.N || this.compare(this.keys[i],key) != 0) {
+           		 return;
+       		}
+			for(var j = i; j < i-this.N-1 ; j++){
+				this.keys[j] = this.keys[j+1]; this.values[j] = this.values[j+1];
 			}
 			this.keys[i] = null; this.values[i] = null;
-			N--;
-		},
+			this.N--;
+		}
 
 		this.floor = function(key){
 			var i = rank(key);
