@@ -76,7 +76,6 @@
 		},
 
 		this.del = function(key){
-			debugger;
 			var i = this.rank(key);
 			//不存在
 			if (i == this.N || this.compare(this.keys[i],key) != 0) {
