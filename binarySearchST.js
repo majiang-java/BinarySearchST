@@ -1,6 +1,6 @@
 /**
  * Author: vincent
- * license: GBL-3.0
+ * license: apache license 2.0
  * 基于二分查找的有序符号表
  */
 
