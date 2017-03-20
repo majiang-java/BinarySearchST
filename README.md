@@ -8,11 +8,16 @@
 
 直接调用
 ```  
-for(var i = 0 ; i <1000; i++){
-	bst.put(i+"",i);
-}
+var bst = new BinarySearchST();
 		
-console.log(bst.get(555));
+for(var i = 0 ; i <1000; i++){
+	bst.put(i,i);
+}
+
+console.log(bst.get(888));
+console.log(bst.del(666));
+console.log(bst.get(666));
+console.log(bst.get(888));
 ```
 
 
