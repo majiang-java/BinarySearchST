@@ -3,8 +3,22 @@
  * license: apache license 2.0
  * 基于二分查找的有序符号表
  */
+ ;(function(factory) {
+	/* global define */
+	if (typeof define === 'function' && define.amd) {
+		// AMD. Register as an anonymous module.
+		define([], factory);
+	} else if (typeof module === 'object') {
+		// Node js environment
+		var BinarySearchST = module.exports = factory();
+		// Keep it backwards compatible
+		BinarySearchST.BinarySearchST = BinarySearchST;
+	} else {
+		// Browser globals (this is window)
+		this.BinarySearchST = factory();
+	}
+}(function() {
 
-	'use strict'
 	 function BinarySearchST(compare,capactity) {
 
 		
@@ -69,6 +83,9 @@
 		this.select = function(k){
 			return this.keys[k];
 		},
+		this.deleteMax = function(){
+			this.delete(N-1);
+		}
 
 		this.ceiling = function(key){
 			var i = rank(key);
@@ -91,6 +108,13 @@
 		this.floor = function(key){
 			var i = rank(key);
 			return this.keys[i-1];
+		},
+		this.clear = function(){
+			this.keys = [];
+			this.values = [];
+			this.N = 0
 		}
 
 	}
+	return BinarySearchST;
+}));
