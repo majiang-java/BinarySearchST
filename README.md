@@ -6,6 +6,10 @@
 
 ## quickly to start
 
+git clone 
+
+npm test
+
 直接调用
 ```  
 var bst = new BinarySearchST();
