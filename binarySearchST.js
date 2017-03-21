@@ -99,9 +99,11 @@ limitations under the License.
 			return this.keys[k];
 		},
 		this.deleteMax = function(){
-			this.delete(N-1);
+			this.del(N-1);
 		}
-
+		this.deleteMin = function(){
+			this.del(0);
+		}
 		this.ceiling = function(key){
 			var i = rank(key);
 			return this.keys[i];
