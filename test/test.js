@@ -40,7 +40,7 @@ describe('bst',function(){
 
 				bst.put(1, 1);
 				console.log(bst.get(1))
-				//expect(bst.get(1)).to.be.1;
+				expect(bst.get(1)).to.equal(1);
 			});
 
 	   });
